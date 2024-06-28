@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeGame</title>    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scores">
+            <button id="buttons">PlayGame</button>
+            <div class="subScore">
+                <div>HighScore<span class="highScore">0</span></div>
+                <div>YourScore<span class="yourscore">0</span></div>
+            </div>
+        </div>
+        <div class="wrapper"></div>
+        <div class="keys">
+            <div class="Buttons"><div id="up"><img src="arrowUp.png" alt=""></div></div>
+            <div class="Buttons">
+                <div id="left"><img src="arrowLeft.png" alt=""></div>
+                <div id="down"><img src="arrowDown.png" alt=""></div>
+                <div id="right"><img src="arrowRight.png" alt=""></div>
+            </div>
+        </div>
+        <img class="dizz" src="dizz.png" alt="">
+    </div>
+    <audio loop id="playAudio">
+        <source src="./gameplay.mp3" type="audio/mpeg" />
+    </audio>
+    <audio loop id="gameOverAudio">
+        <source src="./gameover.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="levelUpAudio">
+        <source src="./levelUp.mp3" type="audio/mpeg" />
+    </audio>
+</body>
+    <script src="index.js" type="module"></script>
+</html> 

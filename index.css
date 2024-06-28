@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+}
+.wrapper{
+    width:95vmin;
+    height:95vmin;
+    display:grid;
+    grid-template-columns: repeat(21,1fr);
+    grid-template-rows: repeat(21,1fr);   
+    position: relative;
+    border:2px solid white;
+}
+.wrapper div{
+    border:0.25vmin solid black;
+}
+.sActive{
+    background-color: rgba(0, 85, 255, 0.711);
+}
+.fActive{
+    background-color:yellow;
+}
+.dizz{
+    position:absolute;
+    top:0;
+    display:none;
+    animation-name:rotating;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;;
+}
+@keyframes rotating {
+    0%{
+        transform:rotateZ(0deg);
+    }
+    100%{
+        transform:rotateZ(360deg);
+    }
+}
+.scores{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    gap:10px;
+}
+.subScore{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.subScore div{
+    min-width:150px;
+    height:50px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size:15px;
+    font-weight:bold;
+    border:2px solid black;
+}
+.scores button{
+    width:120px;
+    height:40px;
+    border:1px solid black;
+    border-radius:10px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    color:black;
+    box-shadow:1px 1px 2px 2px black;
+    font-size:15px;
+}
+.scores button:hover{
+    box-shadow:1px 1px 2px 2px white;
+    color:white;
+    border-color:white;
+}
+.scores span{
+    font-size:40px;
+    color:#495aff;
+}
+.keys{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    /* display:none; */
+}
+.Buttons{
+    min-width:300px;
+    height:60px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.Buttons div{
+    width:27%;
+    height:90%;
+    border:5px solid black;
+    border-radius:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#5f43b2;
+}
+@media (max-width:830px) {
+    .container{
+        flex-direction:column;
+        justify-content:start;
+        gap:15px;
+    }
+    .scores{
+        margin-left:0px;
+        margin-top:50px;
+    }
+    .subScore{
+        flex-direction:row;
+        gap:1px;
+    }
+} 
